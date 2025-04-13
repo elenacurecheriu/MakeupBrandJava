@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
 //        // collection with all of the accounts
 //        ArrayList<Account> accounts = new ArrayList<>();
 //
@@ -38,7 +39,16 @@ public class Main {
 //        Product product2 = new Product();
 //        System.out.println("Product ID: " + product.getProductID());
 //        System.out.println("Product2 ID: " + product2.getProductID());
-
+//
+//        ProductReview pr = new ProductReview();
+//        EmployeeReview emp = new EmployeeReview();
+//        System.out.println("Product Review ID: " + pr.getReviewID());
+//        System.out.println("Employee Review ID: " + emp.getReviewID());
+//
+//        Store store = new Store();
+//        System.out.println("Store ID: " + store.getStoreID());
+//        Store store2 = new Store();
+//        System.out.println("Store2 ID: " + store2.getStoreID());
     }
 }
 

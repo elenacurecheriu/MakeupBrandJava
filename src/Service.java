@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class Service {
-    private static int serviceID;
+    private static int noOfServices = 0;
+    private int serviceID;
     private String type;
     private double price;
     private int duration;
@@ -9,14 +10,15 @@ public class Service {
 
     static
     {
-        serviceID = 0;
+        noOfServices = 0;
     }
 
     {
-        serviceID++;
+        noOfServices++;
     }
 
     public Service(String type, double price, int duration, ArrayList<Employee> qualifiedEmployees) {
+        this.serviceID = noOfServices;
         this.type = type;
         this.price = price;
         this.duration = duration;
@@ -24,19 +26,20 @@ public class Service {
     }
 
     public Service() {
+        this.serviceID = noOfServices;
         this.type = "";
         this.price = 0.0;
         this.duration = 0;
         this.qualifiedEmployees = new ArrayList<>();
     }
 
-    public static int getServiceID() {
+    public int getServiceID() {
         return serviceID;
     }
 
-    public static void setServiceID(int serviceID) {
-        Service.serviceID = serviceID;
-    }
+//    public static void setServiceID(int serviceID) {
+//        Service.serviceID = serviceID;
+//    }
 
     public String getType() {
         return type;
