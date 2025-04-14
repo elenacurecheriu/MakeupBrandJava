@@ -2,9 +2,10 @@ public class Appointment {
     private static int noOfAppointments = 0;
     private int appointmentID;
     private int employeeID;
+    private int serviceID;
     private int customerID;
     private String date;
-    private int finalPrice;
+    private double finalPrice;
 
     static {
         noOfAppointments = 0;
@@ -14,9 +15,10 @@ public class Appointment {
         noOfAppointments++;
     }
 
-    public Appointment(int employeeID, int customerID, String date, int finalPrice) {
+    public Appointment(int employeeID, int serviceID, int customerID, String date, double finalPrice) {
         this.appointmentID = noOfAppointments;
         this.employeeID = employeeID;
+        this.serviceID = serviceID;
         this.customerID = customerID;
         this.date = date;
         this.finalPrice = finalPrice;
@@ -25,6 +27,7 @@ public class Appointment {
     public Appointment() {
         this.appointmentID = noOfAppointments;
         this.employeeID = 0;
+        this.serviceID = 0;
         this.customerID = 0;
         this.date = "";
         this.finalPrice = 0;
@@ -46,6 +49,14 @@ public class Appointment {
         this.employeeID = employeeID;
     }
 
+    public int getServiceID() {
+        return serviceID;
+    }
+
+    public void setServiceID(int serviceID) {
+        this.serviceID = serviceID;
+    }
+
     public int getCustomerID() {
         return customerID;
     }
@@ -62,7 +73,7 @@ public class Appointment {
         this.date = date;
     }
 
-    public int getFinalPrice() {
+    public double getFinalPrice() {
         return finalPrice;
     }
 

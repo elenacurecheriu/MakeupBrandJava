@@ -1,6 +1,7 @@
+import java.util.Objects;
 import java.util.Scanner;
 
-public class Product {
+public class Product implements Comparable<Product>{
     private static int noOfProducts = 0;
     private int productID;
     private String name;
@@ -8,6 +9,7 @@ public class Product {
     private double price;
     private String category;
     private double rating;
+    private int quantitySold;
 
     static
     {
@@ -26,15 +28,17 @@ public class Product {
         this.price = 0.0;
         this.category = "Default Category";
         this.rating = 0.0;
+        this.quantitySold = 0;
     }
 
-    public Product(String productName, String productBrand, double productPrice, String productCategory, double productRating){
+    public Product(String productName, String productBrand, double productPrice, String productCategory){
         this.productID = noOfProducts;
         this.name = productName;
         this.brand = productBrand;
         this.price = productPrice;
         this.category = productCategory;
-        this.rating = productRating;
+        this.rating = 0.0;
+        this.quantitySold = 0;
     }
 
     public Product(Product obj)
@@ -45,6 +49,7 @@ public class Product {
         this.price = obj.price;
         this.category = obj.category;
         this.rating = obj.rating;
+        this.quantitySold = obj.quantitySold;
     }
 
     public int getProductID() {
@@ -95,19 +100,24 @@ public class Product {
         this.rating = rating;
     }
 
-    public static Product readProduct() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter product name: ");
-        String name = scanner.nextLine();
-        System.out.println("Enter product brand: ");
-        String brand = scanner.nextLine();
-        System.out.println("Enter product price: ");
-        double price = scanner.nextDouble();
-        scanner.nextLine();
-        System.out.println("Enter product category: ");
-        String category = scanner.nextLine();
-        System.out.println("Enter product rating: ");
-        double rating = scanner.nextDouble();
-        return new Product(name, brand, price, category, rating);
+    public int getQuantitySold() { return quantitySold; }
+
+    public void setQuantitySold(int quantitySold) { this.quantitySold = quantitySold; }
+
+    public int compareTo (Product other)
+    {
+        return Integer.compare(other.quantitySold, this.quantitySold);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return productID == product.productID && Double.compare(price, product.price) == 0 && Double.compare(rating, product.rating) == 0 && quantitySold == product.quantitySold && Objects.equals(name, product.name) && Objects.equals(brand, product.brand) && Objects.equals(category, product.category);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productID, name, brand, price, category, rating, quantitySold);
     }
 }

@@ -9,14 +9,14 @@ public class Employee extends Account{
     private int commission;
     private double rating;
 
-    public Employee(String name, String username, String password, String email, String position, String hireDate, int storeID, int salary, int commission, double rating) {
+    public Employee(String name, String username, String password, String email, String position, String hireDate, int storeID, int salary, int commission) {
         super(name, username, password, email);
         this.position = position;
         this.hireDate = hireDate;
         this.storeID = storeID;
         this.salary = salary;
         this.commission = commission;
-        this.rating = rating;
+        this.rating = 0.0;
     }
     public Employee() {
         super();

@@ -69,6 +69,7 @@ public class Service {
         return qualifiedEmployees;
     }
 
+
     public void setQualifiedEmployees(ArrayList<Employee> qualifiedEmployees) {
         this.qualifiedEmployees = qualifiedEmployees;
     }

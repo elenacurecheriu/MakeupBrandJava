@@ -9,7 +9,7 @@ public class Purchase {
     private String type;
     private int employeeID;
     private ArrayList<Product> products;
-    private int finalPrice;
+    private double finalPrice;
 
     static
     {
@@ -20,7 +20,7 @@ public class Purchase {
         noOfPurchases++;
     }
 
-    public Purchase(String purchaseDate, int customerID, String type, int employeeID, ArrayList<Product> products, int finalPrice) {
+    public Purchase(String purchaseDate, int customerID, String type, int employeeID, ArrayList<Product> products, double finalPrice) {
         this.purchaseID = noOfPurchases;
         this.purchaseDate = purchaseDate;
         this.customerID = customerID;
@@ -88,7 +88,7 @@ public class Purchase {
         this.products = products;
     }
 
-    public int getFinalPrice() {
+    public double getFinalPrice() {
         return finalPrice;
     }
 
