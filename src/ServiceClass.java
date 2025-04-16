@@ -215,7 +215,6 @@ public class ServiceClass {
         }
     }
 
-    /// UNTESTED vvvvvvvvvvvvvv
     //cancel appointment
     public static void cancelAppointment(){
         Scanner scanner = new Scanner(System.in);

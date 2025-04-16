@@ -53,7 +53,23 @@ public class Main {
 //                System.out.println("Employee Name: " + employee.getName() + ", Position: " + employee.getPosition());
 //            System.out.println();
 //        }
-        ServiceClass.bookAppointment();
+//        ServiceClass.bookAppointment();
+
+        Appointment appointment1 = new Appointment(3, 1, 2, "2023-10-01", 500);
+//        customer1.getAppointmentHistory().add(appointment1);
+//        System.out.println(customer1.getAppointmentHistory());
+
+//        ServiceClass.cancelAppointment();
+
+//        System.out.println(customer1.getAppointmentHistory());
+
+//        ServiceClass.displayStoreWithMostSales();
+
+        ProductReview review1 = new ProductReview(2, "2023-10-01", "Bad product :(", 2, 1);
+        reviews.add(review1);
+
+        ServiceClass.deleteBadReviews("Bad"); //este case sensitive, have to fix
+
 
     }
 }
