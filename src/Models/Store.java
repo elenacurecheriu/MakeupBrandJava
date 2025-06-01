@@ -1,24 +1,17 @@
+package Models;
+
 import java.util.ArrayList;
 import java.util.Map;
 
 public class Store {
-    private static int noOfStores = 0;
     private int storeID;
     private String location;
     private int noOfEmployees;
     private ArrayList<Employee> employees;
     private Map<Product, Integer> inventory;
 
-    static {
-        noOfStores = 0;
-    }
-
-    {
-        noOfStores++;
-    }
 
     public Store(String location, int noOfEmployees, ArrayList<Employee> employees, Map<Product, Integer> inventory) {
-        this.storeID = noOfStores;
         this.location = location;
         this.noOfEmployees = noOfEmployees;
         this.employees = employees;
@@ -26,20 +19,33 @@ public class Store {
     }
 
     public Store() {
-        this.storeID = noOfStores;
         this.location = "";
         this.noOfEmployees = 0;
         this.employees = new ArrayList<>();
         this.inventory = null;
     }
 
+    public Store(String location, int noOfEmployees) {
+        this.noOfEmployees = noOfEmployees;
+        this.location = location;
+    }
+
+    public Store(Store store)
+    {
+        this.storeID = store.storeID;
+        this.location = store.location;
+        this.noOfEmployees = store.noOfEmployees;
+        this.employees = new ArrayList<>(store.employees);
+        this.inventory = store.inventory; // Assuming a shallow copy is sufficient for the inventory
+    }
+
     public int getStoreID() {
         return storeID;
     }
 
-//    public static void setStoreID(int storeID) {
-//        Store.storeID = storeID;
-//    }
+    public void setStoreID(int storeID) {
+        this.storeID = storeID;
+    }
 
     public String getLocation() {
         return location;

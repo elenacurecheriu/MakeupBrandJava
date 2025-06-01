@@ -1,3 +1,5 @@
+package Models;
+
 import java.util.ArrayList;
 
 public class Service {
@@ -38,7 +40,7 @@ public class Service {
     }
 
 //    public static void setServiceID(int serviceID) {
-//        Service.serviceID = serviceID;
+//        Models.Service.serviceID = serviceID;
 //    }
 
     public String getType() {

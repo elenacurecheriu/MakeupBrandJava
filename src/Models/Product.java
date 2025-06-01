@@ -1,8 +1,8 @@
+package Models;
+
 import java.util.Objects;
-import java.util.Scanner;
 
 public class Product implements Comparable<Product>{
-    private static int noOfProducts = 0;
     private int productID;
     private String name;
     private String brand;
@@ -11,19 +11,10 @@ public class Product implements Comparable<Product>{
     private double rating;
     private int quantitySold;
 
-    static
-    {
-        noOfProducts = 0;
-    }
-
-    {
-        noOfProducts++;
-    }
 
     public Product()
     {
-        this.productID = noOfProducts;
-        this.name = "Default Product Name";
+        this.name = "Default Models.Product Name";
         this.brand = "Default Brand";
         this.price = 0.0;
         this.category = "Default Category";
@@ -32,7 +23,6 @@ public class Product implements Comparable<Product>{
     }
 
     public Product(String productName, String productBrand, double productPrice, String productCategory){
-        this.productID = noOfProducts;
         this.name = productName;
         this.brand = productBrand;
         this.price = productPrice;
@@ -53,12 +43,12 @@ public class Product implements Comparable<Product>{
     }
 
     public int getProductID() {
-        return productID;
+        return this.productID;
     }
 
-//    public static void setProductID(int productID) {
-//        Product.productID = productID;
-//    }
+    public void setProductID(int productID) {
+        this.productID = productID;
+    }
 
     public String getName() {
         return name;

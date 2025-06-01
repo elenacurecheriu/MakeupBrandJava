@@ -1,23 +1,14 @@
+package Models;
+
 public abstract class Account {
-    private static int nrOfAccounts = 0;
     private int accountID;
     private String name;
     private String username;
     private String password;
     private String email;
 
-    {
-        nrOfAccounts++;
-    }
-
-    static
-    {
-        nrOfAccounts = 0;
-    }
-
 
     public Account(String name, String username, String password, String email){
-        this.accountID = nrOfAccounts;
         this.name = name;
         this.username = username;
         this.password = password;
@@ -25,7 +16,6 @@ public abstract class Account {
     }
 
     public Account() {
-        this.accountID = nrOfAccounts;
         this.name = "";
         this.username = "";
         this.password = "";
@@ -43,10 +33,10 @@ public abstract class Account {
     public int getAccountID() {
         return accountID;
     }
-//
-//    public void setAccountID(int accountID) {
-//        Account.accountID = accountID;
-//    }
+
+    public void setAccountID(int accountID) {
+        this.accountID = accountID;
+    }
 
     public String getName() {
         return name;

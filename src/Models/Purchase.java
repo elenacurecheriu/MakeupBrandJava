@@ -1,5 +1,6 @@
+package Models;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class Purchase {
     private static int noOfPurchases = 0;
@@ -45,7 +46,7 @@ public class Purchase {
     }
 
 //    public static void setPurchaseID(int purchaseID) {
-//        Purchase.purchaseID = purchaseID;
+//        Models.Purchase.purchaseID = purchaseID;
 //    }
 
     public String getPurchaseDate() {

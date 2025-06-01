@@ -1,4 +1,6 @@
-public class EmployeeReview extends Review{
+package Models;
+
+public class EmployeeReview extends Review {
     private int employeeID;
 
     public EmployeeReview(int customerID, String date, String reviewText, int rating, int employeeID) {

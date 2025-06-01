@@ -1,4 +1,6 @@
-public class Manager extends Account{
+package Models;
+
+public class Manager extends Account {
     private int storeID;
     private String hireDate;
     private int salary;

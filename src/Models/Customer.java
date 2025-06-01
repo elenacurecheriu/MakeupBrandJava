@@ -1,6 +1,8 @@
+package Models;
+
 import java.util.ArrayList;
 
-public class Customer extends Account{
+public class Customer extends Account {
     private ArrayList<Purchase> purchaseHistory;
     private ArrayList<Appointment> appointmentHistory;
     private LoyaltyCard loyaltyCard;

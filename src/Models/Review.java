@@ -1,3 +1,5 @@
+package Models;
+
 public abstract class Review {
     private static int noOfReviews = 0;
     private int reviewID;
@@ -35,7 +37,7 @@ public abstract class Review {
     }
 
 //    public static void setReviewID(int reviewID) {
-//        Review.reviewID = reviewID;
+//        Models.Review.reviewID = reviewID;
 //    }
 
     public int getCustomerID() {

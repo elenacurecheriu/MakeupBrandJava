@@ -1,3 +1,5 @@
+package Models;
+
 public class Appointment {
     private static int noOfAppointments = 0;
     private int appointmentID;
@@ -38,7 +40,7 @@ public class Appointment {
     }
 
 //    public void setAppointmentID(int appointmentID) {
-//        Appointment.appointmentID = appointmentID;
+//        Models.Appointment.appointmentID = appointmentID;
 //    }
 
     public int getEmployeeID() {
